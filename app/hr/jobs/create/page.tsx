@@ -11,7 +11,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { UserNav } from "@/components/user-nav"
+import { HRNav } from "@/components/hr-nav"
 import { AlertCircle, ArrowLeft, Briefcase } from "lucide-react"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 
@@ -71,7 +71,7 @@ export default function CreateJobPage() {
       <header className="border-b">
         <div className="container flex h-16 items-center justify-between">
           <h1 className="text-xl font-bold">TalentBridge</h1>
-          <UserNav />
+          <HRNav />
         </div>
       </header>
       <div className="container mx-auto py-10 flex-1">

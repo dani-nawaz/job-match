@@ -7,7 +7,7 @@ import { getSupabaseBrowserClient } from "@/lib/supabase"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { UserNav } from "@/components/user-nav"
+import { UniversityNav } from "@/components/university-nav"
 import type { University, Student, Job, Recommendation } from "@/types/supabase"
 import { PlusCircle, Users, Briefcase, Award, LogOut } from "lucide-react"
 
@@ -94,7 +94,7 @@ export default function UniversityDashboard() {
         <header className="border-b">
           <div className="container flex h-16 items-center justify-between">
             <h1 className="text-xl font-bold">InternMatch</h1>
-            <UserNav />
+            <UniversityNav />
           </div>
         </header>
         <div className="container mx-auto py-10 flex-1">
@@ -133,7 +133,7 @@ export default function UniversityDashboard() {
                 </>
               )}
             </Button>
-            <UserNav />
+            <UniversityNav />
           </div>
         </div>
       </header>

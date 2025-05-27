@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Progress } from "@/components/ui/progress"
-import { UserNav } from "@/components/user-nav"
+import { HRNav } from "@/components/hr-nav"
 import {
   AlertCircle,
   Award,
@@ -149,7 +149,7 @@ export default function JobDetailsPage() {
         <header className="border-b">
           <div className="container flex h-16 items-center justify-between">
             <h1 className="text-xl font-bold">TalentBridge</h1>
-            <UserNav />
+            <HRNav />
           </div>
         </header>
         <div className="container mx-auto py-10 flex-1 flex items-center justify-center">
@@ -168,7 +168,7 @@ export default function JobDetailsPage() {
         <header className="border-b">
           <div className="container flex h-16 items-center justify-between">
             <h1 className="text-xl font-bold">TalentBridge</h1>
-            <UserNav />
+            <HRNav />
           </div>
         </header>
         <div className="container mx-auto py-10 flex-1">
@@ -198,7 +198,7 @@ export default function JobDetailsPage() {
       <header className="border-b">
         <div className="container flex h-16 items-center justify-between">
           <h1 className="text-xl font-bold">TalentBridge</h1>
-          <UserNav />
+          <HRNav />
         </div>
       </header>
       <div className="container mx-auto py-10 flex-1">
