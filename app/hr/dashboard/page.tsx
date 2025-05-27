@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Progress } from "@/components/ui/progress"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { UserNav } from "@/components/user-nav"
+import { HRNav } from "@/components/hr-nav"
 import { generateRecommendations } from "@/app/actions/generate-recommendations"
 import {
   Award,
@@ -183,7 +183,7 @@ export default function HRDashboard() {
         <header className="border-b">
           <div className="container flex items-center justify-between h-16 mx-auto">
             <h1 className="text-xl font-bold">TalentBridge</h1>
-            <UserNav />
+            <HRNav />
           </div>
         </header>
         <div className="flex items-center justify-center flex-1">
@@ -201,7 +201,7 @@ export default function HRDashboard() {
       <header className="border-b">
         <div className="container flex items-center justify-between h-16 mx-auto">
           <h1 className="text-xl font-bold">TalentBridge</h1>
-          <UserNav />
+          <HRNav />
         </div>
       </header>
 
