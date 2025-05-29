@@ -1,57 +1,61 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useParams } from "next/navigation"
+import { useTranslations } from 'next-intl'
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { useAuth } from "@/contexts/auth-context"
 
 export function UniversityNav() {
   const pathname = usePathname()
+  const params = useParams()
+  const locale = params.locale as string
+  const t = useTranslations('navigation')
   const { signOut } = useAuth()
 
   return (
-    <nav className="flex items-center space-x-4">
+    <nav className="flex items-center space-x-4 rtl:space-x-reverse">
       <Link
-        href="/university/dashboard"
+        href={`/${locale}/university/dashboard`}
         className={cn(
           "text-sm font-medium transition-colors hover:text-primary",
-          pathname === "/university/dashboard" ? "text-primary" : "text-muted-foreground",
+          pathname === `/${locale}/university/dashboard` ? "text-primary" : "text-muted-foreground",
         )}
       >
-        Dashboard
+        {t('dashboard')}
       </Link>
       <Link
-        href="/university/students"
+        href={`/${locale}/university/students`}
         className={cn(
           "text-sm font-medium transition-colors hover:text-primary",
-          pathname === "/university/students" || pathname.startsWith("/university/students/")
+          pathname === `/${locale}/university/students` || pathname.startsWith(`/${locale}/university/students/`)
             ? "text-primary"
             : "text-muted-foreground",
         )}
       >
-        Students
+        {t('students')}
       </Link>
       <Link
-        href="/university/students/upload"
+        href={`/${locale}/university/students/upload`}
         className={cn(
           "text-sm font-medium transition-colors hover:text-primary",
-          pathname === "/university/students/upload" ? "text-primary" : "text-muted-foreground",
+          pathname === `/${locale}/university/students/upload` ? "text-primary" : "text-muted-foreground",
         )}
       >
-        Upload
+        {t('upload')}
       </Link>
       <Link
-        href="/university/recommendations"
+        href={`/${locale}/university/recommendations`}
         className={cn(
           "text-sm font-medium transition-colors hover:text-primary",
-          pathname === "/university/recommendations" ? "text-primary" : "text-muted-foreground",
+          pathname === `/${locale}/university/recommendations` ? "text-primary" : "text-muted-foreground",
         )}
       >
-        Recommendations
+        {t('recommendations')}
       </Link>
       <Button variant="ghost" size="sm" onClick={() => signOut()}>
-        Logout
+        {t('logout')}
       </Button>
     </nav>
   )

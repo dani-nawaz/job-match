@@ -1,55 +1,59 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useParams } from "next/navigation"
+import { useTranslations } from 'next-intl'
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { useAuth } from "@/contexts/auth-context"
 
 export function HRNav() {
   const pathname = usePathname()
+  const params = useParams()
+  const locale = params.locale as string
+  const t = useTranslations('navigation')
   const { signOut } = useAuth()
 
   return (
-    <nav className="flex items-center space-x-4">
+    <nav className="flex items-center space-x-4 rtl:space-x-reverse">
       <Link
-        href="/hr/dashboard"
+        href={`/${locale}/hr/dashboard`}
         className={cn(
           "text-sm font-medium transition-colors hover:text-primary",
-          pathname === "/hr/dashboard" ? "text-primary" : "text-muted-foreground",
+          pathname === `/${locale}/hr/dashboard` ? "text-primary" : "text-muted-foreground",
         )}
       >
-        Dashboard
+        {t('dashboard')}
       </Link>
       <Link
-        href="/hr/jobs"
+        href={`/${locale}/hr/jobs`}
         className={cn(
           "text-sm font-medium transition-colors hover:text-primary",
-          pathname === "/hr/jobs" || pathname.startsWith("/hr/jobs/") ? "text-primary" : "text-muted-foreground",
+          pathname === `/${locale}/hr/jobs` || pathname.startsWith(`/${locale}/hr/jobs/`) ? "text-primary" : "text-muted-foreground",
         )}
       >
-        Jobs
+        {t('jobs')}
       </Link>
       <Link
-        href="/hr/jobs/create"
+        href={`/${locale}/hr/jobs/create`}
         className={cn(
           "text-sm font-medium transition-colors hover:text-primary",
-          pathname === "/hr/jobs/create" ? "text-primary" : "text-muted-foreground",
+          pathname === `/${locale}/hr/jobs/create` ? "text-primary" : "text-muted-foreground",
         )}
       >
-        Post Job
+        {t('postJob')}
       </Link>
       <Link
-        href="/hr/recommendations"
+        href={`/${locale}/hr/recommendations`}
         className={cn(
           "text-sm font-medium transition-colors hover:text-primary",
-          pathname === "/hr/recommendations" ? "text-primary" : "text-muted-foreground",
+          pathname === `/${locale}/hr/recommendations` ? "text-primary" : "text-muted-foreground",
         )}
       >
-        Recommendations
+        {t('recommendations')}
       </Link>
       <Button variant="ghost" size="sm" onClick={() => signOut()}>
-        Logout
+        {t('logout')}
       </Button>
     </nav>
   )
