@@ -6,7 +6,7 @@ import { getSupabaseBrowserClient } from "@/lib/supabase"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { UserNav } from "@/components/user-nav"
+import { HRNav } from "@/components/hr-nav"
 import { ArrowLeft, Briefcase, GraduationCap, MapPin, Building, Award, Loader2 } from "lucide-react"
 import Link from "next/link"
 
@@ -53,7 +53,7 @@ export default function RecommendationDetailsPage() {
         <header className="border-b">
           <div className="container flex h-16 items-center justify-between">
             <h1 className="text-xl font-bold">InternMatch</h1>
-            <UserNav />
+            <HRNav />
           </div>
         </header>
         <div className="container mx-auto py-10 flex-1 flex items-center justify-center">
@@ -72,7 +72,7 @@ export default function RecommendationDetailsPage() {
         <header className="border-b">
           <div className="container flex h-16 items-center justify-between">
             <h1 className="text-xl font-bold">InternMatch</h1>
-            <UserNav />
+            <HRNav />
           </div>
         </header>
         <div className="container mx-auto py-10 flex-1">
@@ -97,7 +97,7 @@ export default function RecommendationDetailsPage() {
       <header className="border-b">
         <div className="container flex h-16 items-center justify-between">
           <h1 className="text-xl font-bold">InternMatch</h1>
-          <UserNav />
+          <HRNav />
         </div>
       </header>
       <div className="container mx-auto py-10 flex-1">

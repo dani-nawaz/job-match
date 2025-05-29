@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
-import { UserNav } from "@/components/user-nav"
+import { HRNav } from "@/components/hr-nav"
 import { PlusCircle, Search, Briefcase, Loader2 } from "lucide-react"
 import { useAuth } from "@/contexts/auth-context"
 
@@ -75,7 +75,7 @@ export default function HRJobsPage() {
       <header className="border-b">
         <div className="container flex h-16 items-center justify-between">
           <h1 className="text-xl font-bold">InternMatch</h1>
-          <UserNav />
+          <HRNav />
         </div>
       </header>
       <div className="container mx-auto py-10 flex-1">

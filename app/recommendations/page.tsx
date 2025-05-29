@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Slider } from "@/components/ui/slider"
-import { UserNav } from "@/components/user-nav"
+import { HRNav } from "@/components/hr-nav"
 import { Search, Filter, MapPin, Building, Briefcase } from "lucide-react"
 
 // Mock internship data
@@ -152,7 +152,7 @@ export default function RecommendationsPage() {
       <header className="border-b">
         <div className="container flex items-center justify-between h-16 mx-auto">
           <h1 className="text-xl font-bold">InternMatch</h1>
-          <UserNav />
+          <HRNav />
         </div>
       </header>
       <div className="flex-1 py-6 bg-gray-50">
