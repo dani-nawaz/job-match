@@ -1,4 +1,5 @@
 {  "common": {
+    "appName": "إنترن ماتش",
     "loading": "جاري التحميل...",
     "error": "خطأ",
     "success": "نجح",
@@ -39,9 +40,9 @@
     "unexpectedError": "حدث خطأ غير متوقع",
     "optional": "اختياري",
     "emailPlaceholder": "أدخل عنوان بريدك الإلكتروني",
-    "passwordPlaceholder": "أدخل كلمة المرور",
-    "fullName": "الاسم الكامل",
-    "fullNamePlaceholder": "أدخل اسمك الكامل"
+    "passwordPlaceholder": "أدخل كلمة المرور",    "fullName": "الاسم الكامل",
+    "fullNamePlaceholder": "أدخل اسمك الكامل",
+    "view": "عرض"
   },"navigation": {
     "home": "الرئيسية",
     "about": "نبذة عنا",
@@ -273,9 +274,21 @@
     "locationPlaceholder": "الرياض، المملكة العربية السعودية",
     "internshipHistoryCommaSeparated": "تاريخ التدريب (مفصول بفواصل)",
     "internshipPlaceholder": "متدرب صيفي في شركة تقنية، مساعد باحث",
-    "studentsReadyForUpload": "الطلاب جاهزون للرفع ({count})",
-    "uploadingStudents": "جاري رفع {count} طالب...",
-    "uploadStudentsCount": "رفع {count} طالب"
+    "studentsReadyForUpload": "الطلاب جاهزون للرفع ({count})",    "uploadingStudents": "جاري رفع {count} طالب...",
+    "uploadStudentsCount": "رفع {count} طالب",
+    "csvUploadDescription": "رفع ملف CSV يحتوي على معلومات الطلاب",
+    "downloadTemplate": "تحميل النموذج",
+    "uploadCsvFile": "رفع ملف CSV",
+    "dragDropText": "اسحب وأفلت ملف CSV هنا، أو انقر للتصفح",
+    "supportedFiles": "يدعم: ملفات CSV حتى 10 ميجابايت",
+    "chooseFile": "اختر ملف",
+    "dropFileHere": "أفلت ملف CSV هنا",
+    "processingFile": "جاري معالجة الملف...",
+    "fileRequirementsHeader": "متطلبات الملف:",
+    "csvHeadersRequired": "يجب أن يحتوي ملف CSV على العناوين التالية: الاسم، البريد الإلكتروني، التخصص، المعدل التراكمي، المهارات",
+    "skillsSeparator": "يجب فصل المهارات بفاصلة منقوطة (;)",
+    "gpaFormat": "يجب أن يكون المعدل التراكمي رقماً بين 0.0 و 4.0",
+    "maxFileSize": "الحد الأقصى لحجم الملف: 10 ميجابايت"
   },
   "internship": {
     "title": "التدريب",

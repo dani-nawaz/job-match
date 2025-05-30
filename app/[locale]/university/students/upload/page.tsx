@@ -16,6 +16,8 @@ import { parseStudentCSV, getCSVTemplate, type StudentData } from "@/lib/csv-par
 import { useAuth } from "@/contexts/auth-context"
 import { CSVFileUpload } from "@/components/csv-file-upload"
 import { CheckCircle, AlertCircle, Users, UploadIcon } from "lucide-react"
+import { UniversityNav } from "@/components/university-nav"
+import { LanguageToggle } from "@/components/language-toggle"
 
 interface StudentUploadPageProps {
   params: {
@@ -23,7 +25,8 @@ interface StudentUploadPageProps {
   }
 }
 
-export default function StudentUploadPage({ params: { locale } }: StudentUploadPageProps) {
+export default function StudentUploadPage() {
+
   const t = useTranslations('university')
   const tCommon = useTranslations('common')
   const tValidation = useTranslations('validation')
@@ -33,6 +36,9 @@ export default function StudentUploadPage({ params: { locale } }: StudentUploadP
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
   const { toast } = useToast()
   const router = useRouter()
+  const urlParams = new URLSearchParams(window?.location.search)
+  const locale = urlParams.get('locale') || 'en'
+  console.log(locale)
   const supabase = getSupabaseBrowserClient()
 
   // Loading and error states
@@ -267,28 +273,49 @@ export default function StudentUploadPage({ params: { locale } }: StudentUploadP
       description: t('studentAddedDescription'),
     })
   }
-
   if (!user || !profile) {
     return (
-      <div className="container mx-auto py-10">
-        <Card>
-          <CardHeader>
-            <CardTitle>{tCommon('loading')}</CardTitle>
-          </CardHeader>
-        </Card>
+      <div className="flex flex-col min-h-screen">
+        <header className="border-b">
+          <div className="container flex h-16 items-center justify-between">
+            <h1 className="text-xl font-bold">InternMatch</h1>
+            <div className="flex items-center gap-4">
+              <LanguageToggle />
+              <UniversityNav />
+            </div>
+          </div>
+        </header>
+        
+        <div className="container mx-auto py-10 flex-1">
+          <Card>
+            <CardHeader>
+              <CardTitle>{tCommon('loading')}</CardTitle>
+            </CardHeader>
+          </Card>
+        </div>
       </div>
     )
   }
-
   return (
-    <div className="container mx-auto py-10 space-y-6">
-      {/* Header */}
-      <div className="space-y-2">
-        <h1 className="text-3xl font-bold tracking-tight">{t('uploadStudents')}</h1>
-        <p className="text-gray-600">
-          {t('uploadDescription')}
-        </p>
-      </div>
+    <div className="flex flex-col min-h-screen">
+      <header className="border-b">
+        <div className="container flex h-16 items-center justify-between">
+          <h1 className="text-xl font-bold">InternMatch</h1>
+          <div className="flex items-center gap-4">
+            <LanguageToggle />
+            <UniversityNav />
+          </div>
+        </div>
+      </header>
+      
+      <div className="container mx-auto py-10 space-y-6 flex-1">
+        {/* Header */}
+        <div className="space-y-2">
+          <h1 className="text-3xl font-bold tracking-tight">{t('uploadStudents')}</h1>
+          <p className="text-gray-600">
+            {t('uploadDescription')}
+          </p>
+        </div>
 
       <Card>
         <CardHeader>
@@ -492,9 +519,9 @@ export default function StudentUploadPage({ params: { locale } }: StudentUploadP
                 </div>
               )}
             </Button>
-          </CardFooter>
-        )}
+          </CardFooter>        )}
       </Card>
+      </div>
     </div>
   )
 }

@@ -5,7 +5,8 @@ import { usePathname, useParams } from "next/navigation"
 import { useTranslations } from 'next-intl'
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { useAuth } from "@/contexts/auth-context"
+import { useAuth } from "@/contexts/auth-context";
+import { LanguageToggle } from "./language-toggle"
 
 export function HRNav() {
   const pathname = usePathname()
@@ -16,6 +17,7 @@ export function HRNav() {
 
   return (
     <nav className="flex items-center space-x-4 rtl:space-x-reverse">
+      <LanguageToggle />
       <Link
         href={`/${locale}/hr/dashboard`}
         className={cn(

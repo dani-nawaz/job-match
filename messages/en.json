@@ -1,4 +1,5 @@
 {  "common": {
+    "appName": "InternMatch",
     "loading": "Loading...",
     "error": "Error",
     "success": "Success",
@@ -39,9 +40,9 @@
     "unexpectedError": "An unexpected error occurred",
     "optional": "Optional",
     "emailPlaceholder": "Enter your email address",
-    "passwordPlaceholder": "Enter your password",
-    "fullName": "Full Name",
-    "fullNamePlaceholder": "Enter your full name"
+    "passwordPlaceholder": "Enter your password",    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your full name",
+    "view": "View"
   },"navigation": {
     "home": "Home",
     "about": "About",
@@ -273,9 +274,21 @@
     "locationPlaceholder": "San Francisco, CA",
     "internshipHistoryCommaSeparated": "Internship History (comma separated)",
     "internshipPlaceholder": "Summer Intern at Tech Co, Research Assistant",
-    "studentsReadyForUpload": "Students Ready for Upload ({count})",
-    "uploadingStudents": "Uploading {count} Students...",
-    "uploadStudentsCount": "Upload {count} Students"
+    "studentsReadyForUpload": "Students Ready for Upload ({count})",    "uploadingStudents": "Uploading {count} Students...",
+    "uploadStudentsCount": "Upload {count} Students",
+    "csvUploadDescription": "Upload a CSV file with student information",
+    "downloadTemplate": "Download Template",
+    "uploadCsvFile": "Upload CSV File",
+    "dragDropText": "Drag and drop your CSV file here, or click to browse",
+    "supportedFiles": "Supports: CSV files up to 10MB",
+    "chooseFile": "Choose File",
+    "dropFileHere": "Drop your CSV file here",
+    "processingFile": "Processing file...",
+    "fileRequirementsHeader": "File Requirements:",
+    "csvHeadersRequired": "CSV file must include headers: Name, Email, Major, GPA, Skills",
+    "skillsSeparator": "Skills should be separated by semicolons (;)",
+    "gpaFormat": "GPA should be a number between 0.0 and 4.0",
+    "maxFileSize": "Maximum file size: 10MB"
   },
   "internship": {
     "title": "Internship",

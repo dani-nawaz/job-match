@@ -1,8 +1,7 @@
 "use client"
 
 import type React from "react"
-
-import { useState } from "react"
+import { useState, use } from "react"
 import { useRouter } from "next/navigation"
 import { useTranslations } from "next-intl"
 import { useAuth } from "@/contexts/auth-context"
@@ -17,17 +16,19 @@ import { AlertCircle, ArrowLeft, Briefcase } from "lucide-react"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 
 interface CreateJobPageProps {
-  params: {
+  params: Promise<{
     locale: string
-  }
+  }>
 }
 
-export default function CreateJobPage({ params: { locale } }: CreateJobPageProps) {
-  const t = useTranslations('HR')
+export default function CreateJobPage({ params }: CreateJobPageProps) {
+  const { locale } = use(params)
+  const t = useTranslations('hr')
   const tCommon = useTranslations('common')
   const tValidation = useTranslations('validation')
   const { profile } = useAuth()
   const router = useRouter()
+
   const supabase = getSupabaseBrowserClient()
 
   const [title, setTitle] = useState("")

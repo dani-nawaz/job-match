@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState, useCallback, useRef } from "react"
+import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
@@ -31,6 +32,7 @@ export function CSVFileUpload({
   progress = 0,
   className,
 }: FileUploadProps) {
+  const t = useTranslations('university')
   const [isDragOver, setIsDragOver] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
@@ -87,7 +89,7 @@ export function CSVFileUpload({
     <div className={cn("space-y-4", className)}>
       {/* Template Download */}
       <div className="flex items-center justify-between">
-        <p className="text-sm text-gray-600">Upload a CSV file with student information</p>
+        <p className="text-sm text-gray-600">{t('csvUploadDescription')}</p>
         <Button
           variant="outline"
           size="sm"
@@ -96,7 +98,7 @@ export function CSVFileUpload({
           className="flex items-center gap-2"
         >
           <Download className="h-4 w-4" />
-          Download Template
+          {t('downloadTemplate')}
         </Button>
       </div>
 
@@ -136,15 +138,15 @@ export function CSVFileUpload({
 
               <div className="space-y-2">
                 <h3 className="text-lg font-medium text-gray-900">
-                  {isDragOver ? "Drop your CSV file here" : "Upload CSV File"}
+                  {isDragOver ? t('dropFileHere') : t('uploadCsvFile')}
                 </h3>
-                <p className="text-sm text-gray-500">Drag and drop your CSV file here, or click to browse</p>
-                <p className="text-xs text-gray-400">Supports: CSV files up to 10MB</p>
+                <p className="text-sm text-gray-500">{t('dragDropText')}</p>
+                <p className="text-xs text-gray-400">{t('supportedFiles')}</p>
               </div>
 
               {!isLoading && (
                 <Button variant="outline" className="mt-4">
-                  Choose File
+                  {t('chooseFile')}
                 </Button>
               )}
             </div>
@@ -183,7 +185,7 @@ export function CSVFileUpload({
 
                 {isLoading && (
                   <div className="space-y-2">
-                    <p className="text-sm text-blue-600 font-medium">Processing file...</p>
+                    <p className="text-sm text-blue-600 font-medium">{t('processingFile')}</p>
                     <Progress value={progress} className="w-full max-w-xs mx-auto" />
                   </div>
                 )}
@@ -203,10 +205,10 @@ export function CSVFileUpload({
 
       {/* File Requirements */}
       <div className="text-xs text-gray-500 space-y-1">
-        <p>• CSV file must include headers: Name, Email, Major, GPA, Skills</p>
-        <p>• Skills should be separated by semicolons (;)</p>
-        <p>• GPA should be a number between 0.0 and 4.0</p>
-        <p>• Maximum file size: 10MB</p>
+        <p>• {t('csvHeadersRequired')}</p>
+        <p>• {t('skillsSeparator')}</p>
+        <p>• {t('gpaFormat')}</p>
+        <p>• {t('maxFileSize')}</p>
       </div>
     </div>
   )

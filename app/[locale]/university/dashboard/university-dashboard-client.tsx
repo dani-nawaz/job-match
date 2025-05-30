@@ -94,7 +94,7 @@ export default function UniversityDashboardClient({ locale }: UniversityDashboar
               `)
               .eq("student.university_id", universityData.id)
               .order("match_score", { ascending: false })
-
+console.log("Recommendations data:", recommendationsData)
             if (recommendationsError) {
               console.error("Error fetching recommendations:", recommendationsError)
             } else {
@@ -164,19 +164,6 @@ export default function UniversityDashboardClient({ locale }: UniversityDashboar
           <h1 className="text-xl font-bold">InternMatch</h1>
           <div className="flex items-center gap-4">
             <LanguageToggle />
-            <Button variant="outline" onClick={handleLogout} disabled={isLoggingOut}>
-              {isLoggingOut ? (
-                <>
-                  <span className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
-                  {tCommon('loggingOut')}
-                </>
-              ) : (
-                <>
-                  <LogOut className="mr-2 h-4 w-4" />
-                  {tCommon('logout')}
-                </>
-              )}
-            </Button>
             <UniversityNav />
           </div>
         </div>
