@@ -120,7 +120,9 @@
     "quickActions": "الإجراءات السريعة",
     "notifications": "الإشعارات",
     "analytics": "التحليلات"
-  },  "hr": {
+  }, 
+  
+  "hr": {
     "title": "لوحة الموارد البشرية",
     "manageInternships": "إدارة التدريب",
     "viewApplications": "عرض الطلبات",
@@ -202,8 +204,72 @@
       "recentActivity": "النشاط الأخير",
       "noRecentActivity": "لا يوجد نشاط حديث",
       "topSkillsInDemand": "أهم المهارات المطلوبة"
-    }
-  },"university": {
+    },
+
+     "jobDetail": {
+    "title": "تفاصيل الوظيفة",
+    "jobNotFound": "الوظيفة غير موجودة",
+    "applicants": "المتقدمون",
+    "viewApplicants": "عرض المتقدمين",
+    "editJob": "تحرير الوظيفة",
+    "closeJob": "إغلاق الوظيفة",
+    "jobClosed": "الوظيفة مغلقة",
+    "jobActive": "الوظيفة نشطة",
+    "postedOn": "تم النشر في",
+    "deadline": "موعد انتهاء التقديم",
+    "location": "الموقع",
+    "duration": "المدة",
+    "months": "أشهر",
+    "requirements": "المتطلبات",
+    "responsibilities": "المسؤوليات",
+    "benefits": "المزايا",
+    "skillsRequired": "المهارات المطلوبة",
+    "matchStatistics": "إحصائيات التطابق",
+    "totalApplicants": "إجمالي المتقدمين",
+    "strongMatches": "تطابق قوي",
+    "averageMatch": "متوسط التطابق",
+    "topRecommendations": "أفضل التوصيات",
+    "viewAll": "عرض الكل",
+    "noRecommendations": "لا توجد توصيات متاحة",
+    "matchScore": "نتيجة التطابق",
+    "viewProfile": "عرض الملف الشخصي",
+    "contactStudent": "التواصل مع الطالب",
+    "reason": "سبب التطابق",
+    "loading": "جاري تحميل تفاصيل الوظيفة...",
+    "errorLoading": "خطأ في تحميل تفاصيل الوظيفة",
+    "matchStatsDesc": "إحصائيات التطابق تعطيك نظرة عامة على جودة المطابقة بين الوظيفة والمرشحين.",
+     "matchStats": "إحصائيات التطابق",
+    "totalMatches": "إجمالي المطابقات",
+    "highMatches": "مطابقات عالية (80-100%)",
+    "mediumMatches": "مطابقات متوسطة (60-79%)",
+    "generateTitle": "إنشاء مطابقات",
+    "generateDesc": "استخدم الذكاء الاصطناعي لإنشاء مطابقات للوظائف المتاحة مع الطلاب",
+    "generate": "إنشاء مطابقات",
+    "refresh": "تحديث المطابقات",
+    "description": "الوصف",
+    "requiredSkills": "المهارات المطلوبة",
+    "minGPA": "الحد الأدنى للمعدل التراكمي",
+    "recommendations": "التوصيات",
+    "backToDashboard": "العودة إلى لوحة التحكم",
+    "noRecommendationsTitle": "لا توجد توصيات بعد",
+    "noRecommendationsDesc": "ستظهر التوصيات هنا عندما يتم مطابقة الطلاب مع فرص العمل المناسبة.",
+    "posted": "تم النشر",
+    "loadError": "حدث خطأ أثناء تحميل تفاصيل الوظيفة",
+    "loading":"جاري التحميل ...",
+    "generating": "جاري إنشاء المطابقات ...",
+     "highRange": "مطابقات عالية (80-100%)",
+     "mediumRange": "مطابقات متوسطة (60-79%)",
+     "lowRange": "مطابقات منخفضة (0-59%)",
+     "refreshMatches":"تحديث المطابقات",
+     "refreshing": "جاري تحديث المطابقات...",
+     "match":"مطابقة",
+      "viewDetails": "عرض التفاصيل",
+      "gpa": "المعدل التراكمي",
+      "recommendationsCount": "{count} توصيات"
+
+  }
+  },
+  "university": {
     "title": "لوحة الجامعة",
     "manageStudents": "إدارة الطلاب",
     "viewPlacements": "عرض التوظيف",
@@ -308,7 +374,8 @@
     "partTime": "دوام جزئي",
     "paid": "مدفوع الأجر",
     "unpaid": "غير مدفوع الأجر"
-  },  "homepage": {
+  },  
+  "homepage": {
     "hero": {
       "title": "ربط الطلاب بالفرص",
       "subtitle": "سد الفجوة بين الطلاب الموهوبين والشركات المبتكرة من خلال منصتنا الشاملة لمطابقة التدريب.",
@@ -373,7 +440,8 @@
     "footer": {
       "copyright": "© 2024 إنترن ماتش. جميع الحقوق محفوظة."
     }
-  },  "validation": {
+  },  
+  "validation": {
     "required": "هذا الحقل مطلوب",
     "emailInvalid": "يرجى إدخال عنوان بريد إلكتروني صحيح",
     "passwordTooShort": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
@@ -384,7 +452,8 @@
     "invalidGPA": "معدل تراكمي غير صالح",
     "gpaRange": "يجب أن يكون المعدل التراكمي رقماً بين 0 و 4.0",
     "emailPasswordRequired": "البريد الإلكتروني وكلمة المرور مطلوبان"
-  },  "errors": {
+  },  
+  "errors": {
     "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
     "network": "خطأ في الشبكة. يرجى التحقق من اتصالك.",
     "unauthorized": "غير مخول لك القيام بهذا الإجراء.",
@@ -415,38 +484,7 @@
     "markAsRead": "تعيين كمقروءة",
     "markAsUnread": "تعيين كغير مقروءة"
   },
-  "hrJobDetail": {
-    "title": "تفاصيل الوظيفة",
-    "jobNotFound": "الوظيفة غير موجودة",
-    "applicants": "المتقدمون",
-    "viewApplicants": "عرض المتقدمين",
-    "editJob": "تحرير الوظيفة",
-    "closeJob": "إغلاق الوظيفة",
-    "jobClosed": "الوظيفة مغلقة",
-    "jobActive": "الوظيفة نشطة",
-    "postedOn": "تم النشر في",
-    "deadline": "موعد انتهاء التقديم",
-    "location": "الموقع",
-    "duration": "المدة",
-    "months": "أشهر",
-    "requirements": "المتطلبات",
-    "responsibilities": "المسؤوليات",
-    "benefits": "المزايا",
-    "skillsRequired": "المهارات المطلوبة",
-    "matchStatistics": "إحصائيات التطابق",
-    "totalApplicants": "إجمالي المتقدمين",
-    "strongMatches": "تطابق قوي",
-    "averageMatch": "متوسط التطابق",
-    "topRecommendations": "أفضل التوصيات",
-    "viewAll": "عرض الكل",
-    "noRecommendations": "لا توجد توصيات متاحة",
-    "matchScore": "نتيجة التطابق",
-    "viewProfile": "عرض الملف الشخصي",
-    "contactStudent": "التواصل مع الطالب",
-    "reason": "سبب التطابق",
-    "loading": "جاري تحميل تفاصيل الوظيفة...",
-    "errorLoading": "خطأ في تحميل تفاصيل الوظيفة"
-  },
+ 
   "hrRecommendationDetail": {
     "title": "تفاصيل التوصية",
     "recommendationNotFound": "التوصية غير موجودة",

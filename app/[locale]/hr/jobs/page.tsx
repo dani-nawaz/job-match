@@ -18,8 +18,8 @@ interface HRJobsPageProps {
   }
 }
 
-export default function HRJobsPage({ params: { locale } }: HRJobsPageProps) {
-  const t = useTranslations('HR')
+export default function HRJobsPage( ) {
+  const t = useTranslations('hr')
   const tCommon = useTranslations('common')
   const { profile } = useAuth()
   const [jobs, setJobs] = useState<any[]>([])
@@ -27,6 +27,9 @@ export default function HRJobsPage({ params: { locale } }: HRJobsPageProps) {
   const [searchTerm, setSearchTerm] = useState("")
   const [isLoading, setIsLoading] = useState(true)
   const supabase = getSupabaseBrowserClient()
+   const urlParams = new URLSearchParams(window?.location.search)
+  const locale = urlParams.get('locale') || 'en'
+  console.log(locale)
 
   useEffect(() => {
     const fetchJobs = async () => {
